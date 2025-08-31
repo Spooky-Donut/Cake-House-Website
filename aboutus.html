@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutUS</title>
+    <link rel="stylesheet" href="aboutus.css">
+      <link href='https://fonts.googleapis.com/css?family=Poetsen+One' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=K2D' rel='stylesheet'>
+</head>
+<body>
+    
+      <header class="site-header" id="top">
+      <div class="container-nav">
+        <a class="brand" href="#top" aria-label="Cake House - Inicio">
+          <span class="brand-name">CAKE HOUSE</span>
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
+          ☰
+        </button>  
+
+        
+
+        <nav id="primary-nav" class="nav-links" aria-label="Principal">
+          <a href="./index.html">Inicio</a>
+          <a href="./aboutus.html">Nosotros</a>
+          <a href="./products.html">Productos</a>
+          <a href="./contact.html">Contacto</a>
+          <a href="./order.html">Carrito</a>
+        </nav>
+
+      </div> <!--container-nav-->
+      <script>
+          const navToggle = document.querySelector(".nav-toggle");
+          const navLinks = document.querySelector(".nav-links");
+
+          navToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            });
+
+        </script>
+
+    </header>
+
+     <section id="about">
+      <div class="about-container">
+
+        <div class="top-container">
+            <div class="aboutLeft-container">
+            <div class="aboutText-container">
+            <h2 class="text-ourStory"> Nuestra Historia </h2>
+            <h1 class="text-cakes"> Más que pasteles, recuerdos dulces</h1>
+            <p class="text-2010"> Desde 2010, mezclamos tradición, ingredientes frescos y mucho amor en cada receta. Somos una pastelería familiar que cree en el poder de lo hecho en casa.</p>
+            </div>
+          </div> <!--aboutLeft-container-->
+        
+            <div class="aboutRight-container">
+                  <img src="Persona1.png" alt="Pastel dulce">
+                  <img src="Persona2.png" alt="Pastel colorido">
+            </div> <!--aboutRight-container-->
+
+        </div>
+
+                <div class="aboutBottom-container">
+                  <p class="text-coolPhrase">Porque cada pastel tiene una historia que contar</p>
+                </div>
+            </div> <!--about-container-->
+
+            
+    </section>
+
+
+      <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="horarios">
+         <h2>Horarios y redes</h2>
+          <ul class="meta">
+            <li><strong>Lun–Sáb:</strong> 9:00 a 19:00</li>
+            <li><strong>Dom:</strong> 9:00 a 15:00</li>
+            <li><strong>Tel:</strong> (000) 000 0000</li>
+          </ul>
+
+      </div>
+
+      <div class="footer-nav">
+          <h2>Cake House</h2>
+           <ul class="navFoot">
+                  <li><a href="#aboutus">Sobre Nosotros</a></li>
+                        <li><a href="#products">Productos</a></li>
+                              <li><a href="#contact">Contacto</a></li>
+
+          </ul>
+
+      </div>
+
+
+              
+          <div class="socials">
+               <a href="https://facebook.com" target="_blank">
+                <img src="facebook.svg" alt="Facebook" width="24" height="24">
+                <span>Facebook</span> </a>
+                
+              <a href="https://instagram.com" target="_blank">
+        <img src="instagram.svg" alt="instagram" width="24" height="24" style="stroke: 'black';">
+        <span>Instagram</span> </a>
+                
+
+            <a href="https://tiktok.com" target="_blank">
+      <img src="tiktok.svg" alt="tiktok" width="24" height="24">
+      <span>Tiktok</span></a>
+
+                
+        </div>
+                </div>
+
+
+
+      <div class="copyright">
+            <small>© <span id="year"></span> Cake House. Todos los derechos reservados.</small>
+      <nav class="footer-links" aria-label="Secundario">
+        <a href="#">Política de privacidad</a>
+        <a href="#">Términos</a>
+        <a href="#">Soporte</a>
+      </nav>
+          </div>
+          
+          
+      
+    </div>
+  </footer>
+
+  <script>
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

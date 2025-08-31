@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cake House</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href='https://fonts.googleapis.com/css?family=Poetsen+One' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=K2D' rel='stylesheet'>
+  
+</head>
+
+
+  
+<body>
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header" id="top">
+      <div class="container-nav">
+        <a class="brand" href="#top" aria-label="Cake House - Inicio">
+          <span class="brand-name">CAKE HOUSE</span>
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
+          ☰
+        </button>  
+
+        
+
+        <nav id="primary-nav" class="nav-links" aria-label="Principal">
+          <a href="#home">Inicio</a>
+          <a href="./aboutus.html">Nosotros</a>
+          <a href="./products.html">Productos</a>
+          <a href="./contact.html">Contacto</a>
+          <a href="./order.html">Carrito</a>
+        </nav>
+
+      </div> <!--container-nav-->
+      <script>
+          const navToggle = document.querySelector(".nav-toggle");
+          const navLinks = document.querySelector(".nav-links");
+
+          navToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            });
+
+        </script>
+
+    </header>
+
+    <!-- =============== Desktop - 2 =============== -->
+    <section id="home">
+          <div class="carousel-container">
+      <div class="carousel-slide fade">
+        <img src="Cake1.png" alt="Pastel 1">
+      </div>
+      <div class="carousel-slide fade">
+        <img src="Cake2.png" alt="Pastel 2">
+      </div>
+      <div class="carousel-slide fade">
+        <img src="Cake3.png" alt="Pastel 3">
+      </div>
+
+            <script>
+          let index = 0;
+          const slides = document.querySelectorAll(".carousel-slide");
+
+          function showSlides() {
+            slides.forEach(slide => slide.style.opacity = "0"); 
+            index++;
+            if (index > slides.length) index = 1;
+            slides[index - 1].style.opacity = "1"; 
+            setTimeout(showSlides, 5000); 
+          }
+
+          // Inicia al cargar
+          showSlides();
+      </script>
+
+
+      <!-- Texto centrado sobre el carousel -->
+          <div class="carousel-text">
+            <p class="welcome-subtitle">Bienvenido a</p>
+            <p class="welcome-title">Cake House</p>
+            <button class="btn-orderNow" onclick="location.href='./products.html'">Ver catálogo</button>
+          </div>
+        </div>
+
+
+      <div class = "productsPreview-container">
+         <div class = "preview-left">
+          <div class = "preview-leftTextContainer">
+            <p class="about-products">Conoce nuestros productos</p>
+              <p class="about-products-phrase">Descubre sabores únicos, 
+                texturas y diseños para endulzar 
+                tus momentos especiales</p>
+          </div> <!--preview-LeftTextContainer-->
+              
+         </div>
+
+          <div class="preview-right">
+                <div>
+                  <p>Dulce</p>
+                  <img src="Cake4.png" alt="Pastel dulce">
+                </div>
+                <div>
+                  <p>Colorido</p>
+                  <img src="Cake5.png" alt="Pastel colorido">
+                </div>
+                <div>
+                  <p>Esponjoso</p>
+                  <img src="Cake6.png" alt="Pastel esponjoso">
+                </div>
+          </div> <!--preview-right-->
+      </div>
+    </section>
+
+
+ <!-- =============== Footer =========================== -->
+
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="horarios">
+         <h2>Horarios y redes</h2>
+          <ul class="meta">
+            <li><strong>Lun–Sáb:</strong> 9:00 a 19:00</li>
+            <li><strong>Dom:</strong> 9:00 a 15:00</li>
+            <li><strong>Tel:</strong> (000) 000 0000</li>
+          </ul>
+
+      </div>
+
+      <div class="footer-nav">
+          <h2>Cake House</h2>
+           <ul class="navFoot">
+                  <li><a href="#aboutus">Sobre Nosotros</a></li>
+                        <li><a href="#products">Productos</a></li>
+                              <li><a href="#contact">Contacto</a></li>
+
+          </ul>
+
+      </div>
+
+
+              
+          <div class="socials">
+               <a href="https://facebook.com" target="_blank">
+                <img src="facebook.svg" alt="Facebook" width="24" height="24">
+                <span>Facebook</span> </a>
+                
+              <a href="https://instagram.com" target="_blank">
+        <img src="instagram.svg" alt="instagram" width="24" height="24" style="stroke: 'black';">
+        <span>Instagram</span> </a>
+                
+
+            <a href="https://tiktok.com" target="_blank">
+      <img src="tiktok.svg" alt="tiktok" width="24" height="24">
+      <span>Tiktok</span></a>
+
+                
+        </div>
+                </div>
+
+
+
+      <div class="copyright">
+            <small>© <span id="year"></span> Cake House. Todos los derechos reservados.</small>
+      <nav class="footer-links" aria-label="Secundario">
+        <a href="#">Política de privacidad</a>
+        <a href="#">Términos</a>
+        <a href="#">Soporte</a>
+      </nav>
+          </div>
+          
+          
+      
+    </div>
+  </footer>
+
+  <script>
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
